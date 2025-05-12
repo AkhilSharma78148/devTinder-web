@@ -7,7 +7,9 @@
 - add navbar component to App.jsx file (rafce -> reactArrowFunctionExportComponent)
 - intallled react router dom(npm i
  react-router-dom)
-
+- Create BrowserRouter > Routes component > Routes=/ Body > RouteChildren
+- Create an Outlet in your Body Component
+- Create a footer componnent
 
 
 

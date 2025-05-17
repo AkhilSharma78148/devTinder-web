@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { addUser } from './utlis/userSlice';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
 
@@ -9,6 +10,7 @@ const Login = () => {
   const [emailId, setEmailId] = useState("akhil@gmail.com"); //hook called as useState()
   const [password, setPassword] = useState("Akhil@12");
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleLogin = async () => {
     try {
@@ -18,8 +20,8 @@ const Login = () => {
       },{
         withCredentials: true //Allow without https calls to set the data into cookies
       });
-      console.log(res.data);
       dispatch(addUser(res.data));
+      return navigate("/");
     } catch(err) {
       console.log(err);
     }

@@ -18,7 +18,10 @@
     npm install @reduxjs/toolkit react-redux
 - install react redux and toolkit
 - create/configure the store configureStore => Provider => createSlice => add reducer to store
-
+- Add dev tool redux extension in chrome
+- Login and see if your data is coming properly in the store
+- Navbar should update as soon as user logs in
+- Refactor our code to add constants file + create component folder 
 
  Components-
     Body

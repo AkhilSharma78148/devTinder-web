@@ -11,6 +11,13 @@
 - Create an Outlet in your Body Component
 - Create a footer componnent
 - Create a Login component
+- Install axios
+- CORS - install cors in backend(NodeJs project) - add middleware, with some configuration
+- API call using axios, set setting - {withCrendentials: true}
+- Install redux + toolkit (https://redux-toolkit.js.org/tutorials/quick-start)
+    npm install @reduxjs/toolkit react-redux
+- install react redux and toolkit
+- create/configure the store configureStore => Provider => createSlice => add reducer to store
 
 
  Components-

@@ -1,10 +1,29 @@
+import axios from 'axios';
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux';
+import { addUser } from './utlis/userSlice';
 
 const Login = () => {
 
   //State on react
-  const [emailId, setEmailId] = useState(""); //hook called as useState()
-  const [password, setPassword] = useState("");
+  const [emailId, setEmailId] = useState("akhil@gmail.com"); //hook called as useState()
+  const [password, setPassword] = useState("Akhil@12");
+  const dispatch = useDispatch();
+
+  const handleLogin = async () => {
+    try {
+      const res = await axios.post("http://localhost:7777/login", {
+        emailId,
+        password
+      },{
+        withCredentials: true //Allow without https calls to set the data into cookies
+      });
+      console.log(res.data);
+      dispatch(addUser(res.data));
+    } catch(err) {
+      console.log(err);
+    }
+  }
 
   return (
     <div className="flex justify-center m-10">
@@ -31,7 +50,7 @@ const Login = () => {
             />
           </fieldset>
           <div className="card-actions justify-center m-2">
-            <button className="btn btn-primary">Login</button>
+            <button className="btn btn-primary" onClick={handleLogin}>Login</button>
           </div>
         </div>
       </div>

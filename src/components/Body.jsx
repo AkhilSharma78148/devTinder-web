@@ -10,9 +10,9 @@ import { useEffect } from 'react'
 
 const Body = () => {
 
-    const navigate = useNavigate();
-    const dispatch = useDispatch();
-    const userData = useSelector((store) => store.user);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const userData = useSelector((store) => store.user);
 
   const fetchUser = async () => {
     try {

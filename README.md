@@ -26,7 +26,8 @@
 - You should not access the other routes without login
 - If token is not present, redirect user to login page
 - Logout
-- Profile
+- Profile, View and Update Profile
+- Feed - Get Feed, User card
 
  Components-
     Body

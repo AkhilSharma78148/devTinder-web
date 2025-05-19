@@ -33,6 +33,7 @@
 - Request ingnore/interested
 - own connections
 - request received
+- accept/reject connection requests
 - send connection request
 
  Components-

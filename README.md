@@ -27,7 +27,13 @@
 - If token is not present, redirect user to login page
 - Logout
 - Profile, View and Update Profile
+- show toast message
 - Feed - Get Feed, User card
+
+- Request ingnore/interested
+- own connections
+- request received
+- send connection request
 
  Components-
     Body

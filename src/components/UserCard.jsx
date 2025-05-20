@@ -2,6 +2,7 @@ import axios from 'axios';
 import React from 'react'
 import { BASE_URL } from '../utlis/constants';
 import { useDispatch } from 'react-redux';
+import { removeUserFromFeed } from '../utlis/feedSlice';
 
 const UserCard = ({user}) => {
    const { _id, firstName, lastName, age, about, gender, photoUrl } = user;
@@ -11,8 +12,7 @@ const UserCard = ({user}) => {
    const handleSendRequest = async(status, _id) => {
         try {
             const request = await axios.post(BASE_URL + "/request/send/" + status + "/" + _id, {}, { withCredentials: true});
-            console.log(request);
-            dispatch.removeFeed((_id));
+            dispatch(removeUserFromFeed((_id)));
         } catch(err) {
             console.log(err);
         }

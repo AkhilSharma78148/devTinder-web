@@ -8,8 +8,8 @@ import { BASE_URL } from '../utlis/constants';
 const Login = () => {
 
   //State on react
-  const [emailId, setEmailId] = useState("akhil@gmail.com"); //hook called as useState()
-  const [password, setPassword] = useState("Akhil@12");
+  const [emailId, setEmailId] = useState(""); //hook called as useState()
+  const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
